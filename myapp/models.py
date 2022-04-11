@@ -37,11 +37,13 @@ class Book(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     title = db.Column(db.String(140), nullable=False)
+    author = db.Column(db.String(140), nullable=False)
     summary = db.Column(db.Text, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
 
-    def __init__(self, title, summary, user_id):
+    def __init__(self, title, summary, user_id, author):
         self.title = title
+        self.author = author
         self.summary = summary
         self.user_id = user_id
     

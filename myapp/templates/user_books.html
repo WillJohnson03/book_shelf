@@ -1,4 +1,4 @@
-{}{% extends "base.html" %}
+{% extends "base.html" %}
 {% block content %}
     <div class="container">
         <div class="jumbotron">
@@ -6,14 +6,14 @@
                 <h1>Welcome to the page for {{user.username}}</h1>
             </div>
         </div>
-     {% for books in books.items %}
+    {% for book in books.items %}
     <h2>
         <a href="{{url_for('books.book', book_id=book.id)}}">{{book.title}}</a>
     </h2>
-    Added By: <a href="{{url_for('users.user_bookss', username=book.owner.username)}}">{{book.owner.username}}</a>
+    Added By: <a href="{{url_for('users.user_books', username=book.owner.username)}}">{{book.owner.username}}</a>
 
     <p class="text-muted">
-        Added On: {{post.date.strftime("%y-%m-%d")}}
+        Added On: {{book.date.strftime("%y-%m-%d")}}
     </p>
     <br>
     <p>{{book.text}}</p>
@@ -31,7 +31,7 @@
                 </li>
                 {% else %}
                 <li class="page-item">
-                    <a class="page-link" href="{{url_for('users.user_bookss', username=user.username, page=page_num)}}">{{ page_num }}</a>
+                    <a class="page-link" href="{{url_for('users.user_books', username=user.username, page=page_num)}}">{{ page_num }}</a>
                 </li>
                 {% endif %}
             {% endfor %}
