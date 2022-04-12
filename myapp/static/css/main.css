@@ -28,6 +28,7 @@ body {
 h1 {
   color: #202744;
   text-align: center;
+  text-decoration: underline;
 }
 
 .container {
@@ -38,10 +39,23 @@ h1 {
 }
 
 .card {
-  outline: auto;
+  outline: solid #202744;
   border-color: #202744;
+  border-radius: 5px;
+  background-color: #bec2e8;
   box-shadow:  0 4px 8px 0 #202744;
   margin: 8px;
+  justify-content: center;
+}
+
+.car-boy {
+  text-align: center;
+  height: 8rem;
+}
+
+a.card-title {
+  color: #202744;
+  text-decoration: none;
 }
 
 .card:hover {
@@ -74,5 +88,26 @@ h1 {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  border-radius: 12%;
+  border-radius: 5px;
+}
+
+a.btn-primary {
+  background-color: #d1a617;
+  color: #202744;
+  outline: solid #202744;
+  padding: 6px 6px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+a.btn-primary:hover {
+  box-shadow: 0 8px 16px 0 #202744;
+}
+
+.pages {
+  text-align: center;
+  list-style: none;
 }
