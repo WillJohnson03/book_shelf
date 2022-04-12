@@ -19,9 +19,7 @@ html {
 
 body {
   background-color: #F1F1E6;
-  /* Use a system font, if none are available use an available sans-sarif font */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: Helvetica, Arial, Helvetica, sans-serif;
   margin: 0;
 }
 
@@ -51,6 +49,10 @@ h1 {
 .car-boy {
   text-align: center;
   height: 8rem;
+}
+
+.book-car-boy {
+  text-align: center;
 }
 
 a.card-title {
@@ -110,4 +112,53 @@ a.btn-primary:hover {
 .pages {
   text-align: center;
   list-style: none;
+}
+
+.book-card {
+  outline: solid #202744;
+  border-color: #202744;
+  border-radius: 5px;
+  background-color: #bec2e8;
+  box-shadow:  0 4px 8px 0 #202744;
+  margin: 8px;
+  justify-content: center;
+}
+
+form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+label, input {
+  display: inline-block;
+}
+
+label {
+  width: 30%;
+  text-align: right;
+}
+
+label+input {
+  width: 30%;
+  margin: 5px 0px 5px 5px;
+}
+
+input+input {
+  float: right;
+}
+
+.submit-btn {
+  display: flex;
+  justify-content: center;
+}
+
+#submit {
+  background-color: #d1a617;
+  color: #202744;
+  border-radius: 5px;
+  border: solid #202744;
+}
+
+#submit:hover {
+  box-shadow: 0 8px 16px 0 #202744;
 }
