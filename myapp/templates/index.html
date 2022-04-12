@@ -8,10 +8,11 @@
             <div class="card">
                 <div class="car-boy">
                     <h2>
-                        <a class="card-title" href="{{url_for('books.book', book_id=book.id)}}">{{book.title}}</a>
-                        <a href="{{url_for('users.user_books', username=book.owner.username)}}">Added by: {{book.owner.username}}</a>
+                        <a class="card-title" href="{{url_for('books.book', book_id=book.id)}}">{{book.title}} by: {{book.author}}</a>
                     </h2>
                     <p>Added on: {{book.date.strftime('%Y - %m - %d')}}</p>
+                    <a href="{{url_for('users.user_books', username=book.owner.username)}}">More books added by {{book.owner.username}}</a>
+                    <br>
                     <a class="btn btn-primary" href="{{url_for('books.book', book_id=book.id)}}">Checkout Book</a>
                 </div>
             </div>
