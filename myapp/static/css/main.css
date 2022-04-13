@@ -155,7 +155,7 @@ input+input {
   font-size: 2rem;
   color: #d1a617;
   list-style: none;
-  display: inline-flex;
+  width: 37rem;
 }
 
 #submit {
