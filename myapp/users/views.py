@@ -38,7 +38,7 @@ def login():
             next = request.args.get('next')
 
             if next ==None or not next[0]=='/':
-                next = url_for('core.index')
+                next = url_for('core.info')
 
             return redirect(next)
 
@@ -48,7 +48,7 @@ def login():
 @users.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('core.index')) #once the user has logged out we will redirect them back home
+    return redirect(url_for('core.info')) #once the user has logged out we will redirect them back home
 
 
 #account (update UserForm)
