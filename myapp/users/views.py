@@ -55,22 +55,22 @@ def logout():
 @users.route('/account', methods=['GET', 'POST'])
 @login_required
 def account():
-    form = UpdateUserForm()
-    if form.validate_on_submit(): 
-        current_user.username = form.username.data
-        current_user.email = form.email.data
-        db.session.commit()
-        flash('User account updated!!')
-        return redirect(url_for('users.account'))
-    elif request.method == 'GET':
-        form.username.data = current_user.username
-        form.email.data = current_user.email
+  form = UpdateUserForm()
+  if form.validate_on_submit(): 
+      current_user.username = form.username.data
+      current_user.email = form.email.data
+      db.session.commit()
+      flash('User account updated!!')
+      return redirect(url_for('users.account'))
+  elif request.method == 'GET':
+      form.username.data = current_user.username
+      form.email.data = current_user.email
 
-    return render_template('account.html', form=form)
+  return render_template('account.html', form=form)
 
 @users.route('/<username>')
 def user_books(username):
-    page = request.args.get('page', 1, type=int)
-    user = User.query.filter_by(username=username).first_or_404()
-    books = Book.query.filter_by(owner=user).order_by(Book.date.desc()).paginate(page=page, per_page=5)
-    return render_template('user_books.html', books=books, user=user)
+  page = request.args.get('page', 1, type=int)
+  user = User.query.filter_by(username=username).first_or_404()
+  books = Book.query.filter_by(owner=user).order_by(Book.date.desc()).paginate(page=page, per_page=5)
+  return render_template('user_books.html', books=books, user=user)

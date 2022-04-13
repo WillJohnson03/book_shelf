@@ -63,7 +63,7 @@ a.card-title {
 
 .nav {
   display: flex;
-  flex-direction: row-reverse;
+  /* flex-direction: row-reverse; */
   justify-content: flex-end;
   gap: 10px;
   background-color: #202744;
@@ -109,8 +109,14 @@ a.btn-primary:hover {
 }
 
 .pages {
+  display: flex;
+  justify-content: center;
   text-align: center;
   list-style: none;
+}
+
+.page-item {
+  margin: 1rem;
 }
 
 .page-link {
@@ -153,6 +159,10 @@ input+input {
 .submit-btn {
   display: flex;
   justify-content: center;
+}
+
+.icon {
+  margin: 0 auto 0 1rem;
 }
 
 .icon-link {
