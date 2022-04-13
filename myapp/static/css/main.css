@@ -67,6 +67,7 @@ a.card-title {
 .nav {
   display: flex;
   flex-direction: row-reverse;
+  justify-content: flex-end;
   background-color: #202744;
   min-height: 6rem;
   align-items: center;
@@ -155,7 +156,6 @@ input+input {
   font-size: 2rem;
   color: #d1a617;
   list-style: none;
-  width: 37rem;
 }
 
 #submit {
