@@ -9,12 +9,10 @@
         <p>Added by: {{book.owner.username}}</p>
         <p>Added on: {{ book.date.strftime('%B %d, %Y') }}</p>
         {% if book.owner == current_user %}
-          <div>
-            <a class="btn btn-secondary" href="{{ url_for('books.update', book_id=book.id) }}">Update</a>
+          <div class="book-page">
+            <a class="btn-primary" href="{{ url_for('books.update', book_id=book.id) }}">Update</a>
             <br>
-            <form action="{{ url_for('books.delete_book', book_id=book.id) }}" method="POST">
-              <input class="btn btn-danger" type="submit" value="Delete">
-            </form>
+            <a class="btn-primary" href="{{ url_for('books.delete_book', book_id=book.id) }}" method="POST">Delete</a>
           </div>
         {% endif %}
       </div>

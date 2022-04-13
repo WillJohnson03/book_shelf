@@ -172,6 +172,12 @@ input+input {
   text-decoration: none;
 }
 
+.delete-form {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
 #submit {
   background-color: #d1a617;
   color: #202744;
@@ -181,4 +187,11 @@ input+input {
 
 #submit:hover {
   box-shadow: 0 8px 16px 0 #202744;
+}
+
+.book-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center !important;
 }
