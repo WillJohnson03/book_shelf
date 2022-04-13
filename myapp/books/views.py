@@ -25,7 +25,7 @@ def book(book_id):
   book = Book.query.get_or_404(book_id) 
   return render_template('book.html', title=book.title, date=book.date, book=book)
 
-@books.route('/<int:book_id>/update',methods=['GET','POST'])
+@books.route('/<int:book_id>/update', methods=['GET','POST'])
 @login_required
 def update(book_id):
   book = Book.query.get_or_404(book_id)
