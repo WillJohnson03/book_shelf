@@ -15,9 +15,6 @@
 <body>
   <ul class="nav">
     <li class="nav-link">
-      <a class="navbar-link" href="{{url_for('core.info')}}">Home</a>
-    </li>
-    <li class="nav-link">
       <a class="navbar-link" href="{{url_for('core.index')}}">Book List</a>
     </li>
     {% if current_user.is_authenticated %}
@@ -30,9 +27,8 @@
     <li class="nav-link">
       <a class="navbar-link" href="{{url_for('users.account')}}">Account</a>
     </li>
-    <br>
     <li class="icon">
-      <i class="fas fa-book fa-2x"></i>
+      <a class="icon-link" href="{{url_for('core.info')}}"><i class="fas fa-book fa-2x"></i></a>
     </li>
     {% else %}
     <li class="nav-link">
@@ -41,6 +37,8 @@
     <li class="nav-link">
       <a class="navbar-link" href="{{url_for('users.register')}}">Register</a>
     </li>
+    <li class="icon">
+      <a class="icon-link" href="{{url_for('core.info')}}"><i class="fas fa-book fa-2x"></i></a>
     {% endif %}
   </ul>
   <div class="container">

@@ -153,10 +153,11 @@ input+input {
   justify-content: center;
 }
 
-.icon {
+.icon-link {
   font-size: 2rem;
   color: #d1a617;
   list-style: none;
+  text-decoration: none;
 }
 
 #submit {
