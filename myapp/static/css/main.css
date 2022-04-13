@@ -34,25 +34,22 @@ h1 {
   align-content: center;
   justify-content: center;
   color: #202744;
+  font-size: 1.5rem;
 }
 
 .card {
+  display: grid;
   outline: solid #202744;
   border-color: #202744;
   border-radius: 5px;
   background-color: #bec2e8;
   box-shadow:  0 4px 8px 0 #202744;
   margin: 8px;
+  padding: 1rem;
+  align-content: center;
   justify-content: center;
-}
-
-.car-boy {
   text-align: center;
-  height: 8rem;
-}
-
-.book-car-boy {
-  text-align: center;
+  height: fit-content;
 }
 
 a.card-title {
@@ -114,6 +111,10 @@ a.btn-primary:hover {
 .pages {
   text-align: center;
   list-style: none;
+}
+
+.page-link {
+  font-size: 1.5rem;
 }
 
 .book-card {

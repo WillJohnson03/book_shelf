@@ -7,7 +7,7 @@
   <div class="container">
     <div class="card">
       <div class ="book-car-boy">
-        <h2><a href="{{url_for('books.book', book_id=book.id)}}">{{book.title}} by {{book.author}}</a></h2>
+        <h2><a class="card-title" href="{{url_for('books.book', book_id=book.id)}}">{{book.title}} by {{book.author}}</a></h2>
         <h2>Summary:</h2>
         <h3>{{book.summary}}</h3>
         <p>Added By: <a class="btn-primary" href="{{url_for('users.user_books', username=book.owner.username)}}">{{book.owner.username}}</a></p>
