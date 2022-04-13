@@ -4,16 +4,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script 
+    src="https://kit.fontawesome.com/4da7a940f0.js"
+    crossorigin="anonymous"
+  ></script>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
   <title>BookShelf</title>
 </head>
 <body>
   <ul class="nav">
     <li class="nav-link">
-      <a class="navbar-link" href="{{url_for('core.index')}}">Home</a>
+      <a class="navbar-link" href="{{url_for('core.info')}}">Home</a>
     </li>
     <li class="nav-link">
-      <a class="navbar-link" href="{{url_for('core.info')}}">About</a>
+      <a class="navbar-link" href="{{url_for('core.index')}}">Book List</a>
     </li>
     {% if current_user.is_authenticated %}
     <li class="nav-link">
@@ -24,6 +29,10 @@
     </li>
     <li class="nav-link">
       <a class="navbar-link" href="{{url_for('users.account')}}">Account</a>
+    </li>
+    <br>
+    <li class="icon">
+      <i class="fas fa-book fa-2x"></i>
     </li>
     {% else %}
     <li class="nav-link">

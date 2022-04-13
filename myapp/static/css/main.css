@@ -151,6 +151,13 @@ input+input {
   justify-content: center;
 }
 
+.icon {
+  font-size: 2rem;
+  color: #d1a617;
+  list-style: none;
+  display: inline-flex;
+}
+
 #submit {
   background-color: #d1a617;
   color: #202744;
