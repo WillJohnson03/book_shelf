@@ -68,6 +68,7 @@ a.card-title {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
+  gap: 10px;
   background-color: #202744;
   min-height: 6rem;
   align-items: center;
