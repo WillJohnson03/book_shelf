@@ -2,7 +2,7 @@
 ---
 
 ## About
-BookShelf is an app that you can use to add books you want to read, have read, or are reading along with a short summary and your opinion of the book.
+[BookShelf](https://book-bokkshelf.herokuapp.com/) is an app that you can use to add books you want to read, have read, or are reading along with a short summary and your opinion of the book.
 
 [![screenshot](https://i.imgur.com/C3wTVun.png)](https://book-bokkshelf.herokuapp.com/)
 
