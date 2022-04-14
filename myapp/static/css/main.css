@@ -197,3 +197,9 @@ input+input {
   justify-content: center;
   align-items: center !important;
 }
+
+@media only screen and (max-width: 600px) {
+  .card {
+    width: fit-content;
+  }
+}
