@@ -33,6 +33,7 @@ h1 {
   display: grid;
   align-content: center;
   justify-content: center;
+  justify-items: center;
   color: #202744;
   font-size: 1.5rem;
 }
@@ -50,6 +51,7 @@ h1 {
   justify-content: center;
   text-align: center;
   height: fit-content;
+  width: 55%;
 }
 
 a.card-title {
