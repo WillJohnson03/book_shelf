@@ -19,6 +19,7 @@
 
 ## Ice Box 🧊
 
+- [ ] Connect to an API to easily search and add books
 - [ ] Add Wishlist
 - [ ] Dark Mode
 - [ ] Add a comment section
