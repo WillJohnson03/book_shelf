@@ -66,7 +66,7 @@ def account():
       form.username.data = current_user.username
       form.email.data = current_user.email
 
-  return render_template('account.html', form=form)
+  return render_template('info.html', form=form)
 
 @users.route('/<username>')
 def user_books(username):
