@@ -57,16 +57,16 @@ def logout():
 def account():
   form = UpdateUserForm()
   if form.validate_on_submit(): 
-      current_user.username = form.username.data
-      current_user.email = form.email.data
-      db.session.commit()
-      flash('User account updated!!')
-      return redirect(url_for('users.account'))
+    current_user.username = form.username.data
+    current_user.email = form.email.data
+    db.session.commit()
+    flash('User account updated!!')
+    return redirect(url_for('core.index'))
   elif request.method == 'GET':
-      form.username.data = current_user.username
-      form.email.data = current_user.email
+    form.username.data = current_user.username
+    form.email.data = current_user.email
 
-  return render_template('info.html', form=form)
+  return render_template('account.html', form=form)
 
 @users.route('/<username>')
 def user_books(username):
