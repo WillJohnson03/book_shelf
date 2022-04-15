@@ -16,16 +16,14 @@ app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 ###### DATABASE SETUP ######
 ############################
 
-
 # set up connection to db
-# app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql:///bookish"
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL').replace("://", "ql://", 1)
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql:///bookish"
+# app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL').replace("://", "ql://", 1)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 db.init_app(app)
 Migrate(app, db)
-
 
 #############################
 
@@ -34,10 +32,6 @@ Migrate(app, db)
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'users.login'
-
-
-
-
 
 # Registering Blueprints - 
 
